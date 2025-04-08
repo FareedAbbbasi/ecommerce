@@ -4,7 +4,8 @@ A modern, responsive e-commerce web application built with **React**, **TypeScri
 
 ---
 
-## 🚀 Features
+## 🚀 Features 
+
 
 - 🏠 Home page with featured products
 - 🛍️ Product listing and filtering
