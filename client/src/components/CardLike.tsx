@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import heartIcon from '../assets/images/like.png'
 
 // const [view, setView] = useState()
