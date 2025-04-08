@@ -23,8 +23,8 @@ const DiscountCards: React.FC = () => {
         {id: "prod-5", name: "Gaming Mouse Pro", currentPrice: 59, originalPrice: 99, rating: 82, image: "led.png", imageClass: "max-w-[102px] min-h-[180px]"},
     ]
     return (
-        <div className='w-full flex overflow-x-auto scrollbar-hide whitespace-nowrap gap-[30px]'>
-            {products.map((product) => (
+        <div className='w-full flex overflow-x-auto scrollbar-hide whitespace-nowrap gap-[30px] flex-wrap lg:flex-nowrap'>
+            {products.map((product) => ( 
                 <div key={product.id} className='w-full max-w-[270px] min-w-[270px] h-auto min-h-[350px]'>
                     <div className='w-full  max-w-[270px] relative flex  justify-center h-auto min-h-[250px] bg-[#F5F5F5] '>
                         <div className='absolute top-0 left-0'>
