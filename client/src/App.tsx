@@ -1,5 +1,6 @@
 // import { useState } from 'react'
 import './App.css'
+import BestSellingProducts from './components/bestSelling/bestSellingProducts'
 import CategorySection from './components/categorySection/categorySection'
 import FlashSales from './components/FlashSales'
 import Header from './components/layout/header'
@@ -8,7 +9,7 @@ import ViewAllProductsButton from './components/ViewAllProductsButton'
 
 function App() {
   // const [count, setCount] = useState(0)
-// route "/" - Home
+  // route "/" - Home
   return (
     <div>
       <Header />
@@ -16,8 +17,12 @@ function App() {
       <ViewAllProductsButton />
       <Line />
       <CategorySection />
+      <div className='my-[70px]'>
+        <Line />
+        <BestSellingProducts />
+      </div>
     </div>
- 
+
   )
 }
 
