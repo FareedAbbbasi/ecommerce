@@ -47,12 +47,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 </div>
             </div>{/* Rating */}
             <div className="flex items-center gap-1 text-[#FFAD33] text-sm mb-2">
-                {
-
-                    
-                    }
-                {/* {'★'.repeat(Math.round(rating)) + '☆'.repeat(5 - Math.round(rating))}
-                <span className="text-gray-500 text-xs">({reviews})</span> */}
+                <Star className="w-[17px] h-[17px] "/>
+                <Star className="w-[17px] h-[17px]"/>
+                <Star className="w-[17px] h-[17px]"/>
+                <Star className="w-[17px] h-[17px]"/>
             </div>
         </div>
     );

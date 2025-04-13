@@ -1,4 +1,3 @@
-// import React from 'react'
 import StartBox from '../StartBox'
 import Button from '../ui/button'
 import ProductCard from '../ui/productCard'
@@ -31,13 +30,11 @@ const BestSellingProducts = () => {
                 </div>
             </div>
             <div className='w-full flex justify-center flex-row gap-[30px] flex-wrap'>
-                {/* <DiscountCards /> */}
-                <ProductCard image={'/src/assets/products/coat.png'} title={'The north coat'} price={960} />
+                <ProductCard image={'/src/assets/products/coat.png'} title={'The north coat'} price={960}/>
                 <ProductCard image={'/src/assets/products/bag.png'} title={'Gucci duffle bag'} price={960} />
                 <ProductCard image={'/src/assets/products/cpu.png'} title={'RGB liquid CPU Cooler'} price={960} />
                 <ProductCard image={'/src/assets/products/shelf.png'} title={'Small BookSelf'} price={960} />
             </div>
-            
         </div>
     )
 }

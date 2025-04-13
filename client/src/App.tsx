@@ -8,8 +8,6 @@ import Line from './components/ui/line'
 import ViewAllProductsButton from './components/ViewAllProductsButton'
 
 function App() {
-  // const [count, setCount] = useState(0)
-  // route "/" - Home
   return (
     <div>
       <Header />
