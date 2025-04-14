@@ -7,8 +7,8 @@ import {
 } from "./../ui/select"
 const AnnouncementBar = () => {
   return (
-    <div className="w-full flex justify-evenly items-center h-[48px] bg-black ">
-      <div className="flex gap-2 justify-evenly items-center">
+    <div className="w-full h-auto flex justify-evenly items-center min-h-[48px] bg-black flex-col">
+      <div className="w-full flex gap-2 justify-evenly items-center mx-auto flex-wrap p-5 sm:p-3 md:p-0">
         <div className="flex">
           <div className="text-white"></div>
           <div className="flex gap-2">
@@ -23,7 +23,7 @@ const AnnouncementBar = () => {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="en">English</SelectItem>
-              <SelectItem value="zh">Chinese (Mandarin)</SelectItem>
+              <SelectItem value="zh">Chinese</SelectItem>
               <SelectItem value="es">Spanish</SelectItem>
               <SelectItem value="hi">Hindi</SelectItem>
               <SelectItem value="ar">Arabic</SelectItem>
@@ -33,7 +33,6 @@ const AnnouncementBar = () => {
               <SelectItem value="ja">Japanese</SelectItem>
               <SelectItem value="de">German</SelectItem>
             </SelectContent>
-
           </Select>
         </div>
       </div>

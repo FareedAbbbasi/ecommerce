@@ -1,26 +1,19 @@
-// import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
-import BestSellingProducts from './components/bestSelling/bestSellingProducts'
-import CategorySection from './components/categorySection/categorySection'
-import FlashSales from './components/FlashSales'
-import Header from './components/layout/header'
-import Line from './components/ui/line'
-import ViewAllProductsButton from './components/ViewAllProductsButton'
+import About from './pages/about'
+import SignUp from './pages/signUp'
+import Home from './pages/home';
+import Contact from './pages/contact';
+import { JSX } from 'react';
 
-function App() {
+function App():JSX.Element {
   return (
-    <div>
-      <Header />
-      <FlashSales />
-      <ViewAllProductsButton />
-      <Line />
-      <CategorySection />
-      <div className='my-[70px]'>
-        <Line />
-        <BestSellingProducts />
-      </div>
-    </div>
-
+     <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/contact' element={<Contact />} />
+      <Route path='/about' element={<About />} />
+      <Route path='/signUp' element={<SignUp />}/>
+     </Routes>
   )
 }
 
