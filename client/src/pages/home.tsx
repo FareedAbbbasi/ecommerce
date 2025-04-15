@@ -6,12 +6,16 @@ import CategorySection from '../components/categorySection/categorySection'
 import BestSellingProducts from '../components/bestSelling/bestSellingProducts'
 import AnnouncementBar from '../components/layout/AnnouncementBar'
 import { Header } from '../layouts/Header'
+import CategoryShowcase from '../components/categoryShowcase/categoryShowcase'
+import MusicExperienceBanner from '../components/musicExperienceBanner/musicExperienceBanner'
 
 const Home:React.FC = () => {
   return (
     <div>
       <AnnouncementBar />
       <Header />
+      <Line width='w-[100%]' />
+      <CategoryShowcase />
       <FlashSales />
       <ViewAllProductsButton />
       <Line />
@@ -20,6 +24,8 @@ const Home:React.FC = () => {
         <Line />
         <BestSellingProducts/>
       </div>
+      <MusicExperienceBanner />
+     
     </div>
   )
 }

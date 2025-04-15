@@ -1,9 +1,13 @@
 // import React from 'react'
 
-const Line = () => {
+interface LineProp {
+  width?:string; 
+}
+
+const Line = ({width = 'max-w-[1170px]'}: LineProp) => {
   return (
     <div className='flex justify-center'>
-        <hr className='w-full max-w-[1170px] h-auto min-h-[2px] bg-[#828282]' />
+        <hr className= {`w-full ${width} h-auto min-h-[2px] bg-[#828282]`} />
     </div>
   )
 }

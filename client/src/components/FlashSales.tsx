@@ -6,7 +6,7 @@ import StartBox from './StartBox';
 const FlashSales = () => {
     return (
         <div className="flex flex-col gap-10 px-4 md:px-6 lg:px-8 xl:px-12">
-            <div className="flex flex-wrap justify-between items-center w-full max-w-[1308px] mx-auto">
+            <div className="flex flex-wrap justify-between items-center w-full max-w-[1170px] mx-auto">
                 <div className="flex flex-wrap items-end gap-6 sm:gap-10 lg:gap-[87px]">
                     <div className="flex flex-col gap-4">
                         <div className="flex gap-2 sm:gap-4">
@@ -29,7 +29,7 @@ const FlashSales = () => {
                     <MoveArrow />
                 </div>
             </div>
-            <div className="w-full max-w-[1308px] mx-auto">
+            <div className="w-full max-w-[1170px] mx-auto">
                 <DiscountCards />
             </div>
         </div>
