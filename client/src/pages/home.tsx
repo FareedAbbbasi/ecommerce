@@ -8,6 +8,10 @@ import AnnouncementBar from '../components/layout/AnnouncementBar'
 import { Header } from '../layouts/Header'
 import CategoryShowcase from '../components/categoryShowcase/categoryShowcase'
 import MusicExperienceBanner from '../components/musicExperienceBanner/musicExperienceBanner'
+import ProductList from '../components/productList/productList'
+import NewArrival from '../components/newArrivalSection/newArrival'
+import Services from '../components/servies/services'
+import Footer from '../layouts/footer'
 
 const Home:React.FC = () => {
   return (
@@ -25,7 +29,11 @@ const Home:React.FC = () => {
         <BestSellingProducts/>
       </div>
       <MusicExperienceBanner />
-     
+      <ProductList />
+      <NewArrival />
+      <Services />
+      <Footer />
+      
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import { Eye, Heart, Star } from "lucide-react";
 
-// src/components/ProductCard.tsx
 interface ProductCardProps {
     image: string;
     title: string;
@@ -10,7 +9,9 @@ interface ProductCardProps {
     rating?: number;
     reviews?: number;
     showCartButton?: boolean;
-    showDiscount?:boolean;
+    showDiscount?: boolean;
+    isNew?: boolean
+    showColors: string
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -19,14 +20,20 @@ const ProductCard: React.FC<ProductCardProps> = ({
     price = 260,
     oldPrice = 360,
     discount,
-    rating = 3,
+    rating = 65,
     reviews = 0,
     showCartButton = false,
     showDiscount = true,
+    isNew,
+    showColors
 }) => {
+
     return (
         <div className='w-full max-w-[270px] h-auto min-h-[350px] group relative'>
-            <div className="w-full flex justify-center items-center max-w-[270px] h-auto min-h-[250px] bg-[#F5F5F5] mb-4">
+            <div className="w-full flex justify-center items-center max-w-[270px] h-auto min-h-[250px] bg-[#F5F5F5] mb-4 relative">
+                <div className=" absolute top-3 left-3">
+                    {isNew && <span className="w-full  bg-[#00FF66] rounded-[4px] px-3 py-1 text-[12px] text-white">New</span>}
+                </div>
                 <div className="flex flex-col gap-2 absolute right-4 top-4">
                     {showDiscount && <button className="bg-[#FFFFFF] w-[34px] h-[34px] flex justify-center items-center rounded-[50%]">
                         <Heart />
@@ -43,19 +50,20 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 <h1 className="text-black text-16px font-medium">{title}</h1>
                 <div className="flex gap-3 my-2">
                     <p className="text-[16px] text-[#DB4444] font-medium">${price}</p>
-                    <p className="text-[16px] font-medium text-[#7D8184] line-through">${oldPrice}</p>
+                    <div className="flex items-center gap-1 text-[#FFAD33] text-sm mb-2">
+                        <Star className="w-[17px] h-[17px] " />
+                        <Star className="w-[17px] h-[17px]" />
+                        <Star className="w-[17px] h-[17px]" />
+                        <Star className="w-[17px] h-[17px]" />
+                    </div>
+                    <div>
+                        <p className='text-[14px] font-semibold text-[#7D8184] '>({rating})</p>
+                    </div>
                 </div>
-            </div>{/* Rating */}
-            <div className="flex items-center gap-1 text-[#FFAD33] text-sm mb-2">
-                <Star className="w-[17px] h-[17px] "/>
-                <Star className="w-[17px] h-[17px]"/>
-                <Star className="w-[17px] h-[17px]"/>
-                <Star className="w-[17px] h-[17px]"/>
             </div>
+
         </div>
     );
 };
-
-
 
 export default ProductCard;
