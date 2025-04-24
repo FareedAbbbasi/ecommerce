@@ -3,7 +3,7 @@ import { Car, Headphones, Ticket } from "lucide-react"
 
 const Services = () => {
     return (
-        <div className="w-full max-w-[943px] h-auto min-h-[161px] mx-auto my-[140px] flex gap-[88px] justify-between flex-wrap">
+        <div className="w-full max-w-[943px] h-auto min-h-[161px] mx-auto my-[100px] md:my-[120px] lg:my-[140px] tablet:my-[100px] flex gap-[40px] tablet:gap-[50px] md:gap-[70px] lg:gap-[88px] flex-wrap  justify-center">
             <div className="w-full max-w-[249px] h-auto min-h-[161px] flex flex-col gap-6">
                 <div className=" w-full max-w-[63px] h-auto min-h-[63px] p-[11px] bg-gray-300 rounded-[100%] text-white mx-auto">
                     <Car className="bg-black p-1 rounded-[100%] w-full max-w-[40px] h-auto min-h-[40px]" />

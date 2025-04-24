@@ -1,8 +1,11 @@
-import React from 'react'
+import React from "react"
+import SignUpUser from "../components/signUpUser/signUpUser"
 
 const SignUp:React.FC = () => {
   return (
-    <div>signUp</div>
+    <div>
+     <SignUpUser />
+    </div>
   )
 }
 
