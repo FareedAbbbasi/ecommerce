@@ -33,7 +33,6 @@ const Home:React.FC = () => {
       <NewArrival />
       <Services />
       <Footer />
-      
     </div>
   )
 }
