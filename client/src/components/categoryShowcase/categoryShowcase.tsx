@@ -27,7 +27,7 @@ const CategoryShowcase = () => {
             </div>
             <div className="h-[384px] border bg-[#828282] ml-4 mr-[45px]"></div>
             <div className="w-full flex max-w-[892px] h-auto min-h-[344px] bg-black sm:ml-0 md:ml-[45px] text-white justify-center items-center">
-                <div className="w-full px-5 md:px-10 flex flex-col justify-center">
+                <div className=" px-5 md:px-10 flex flex-col justify-center">
                     <div className="flex items-center gap-2 tablet:gap-[10px] md:gap-3 lg:gap-[14.5px]">
                         <img src="/src/assets/products/logo.png" alt="" />
                         <p className="">iPhone 14 Series</p>

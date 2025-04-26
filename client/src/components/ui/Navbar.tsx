@@ -6,16 +6,16 @@ const Navbar = () => {
       <nav>
         <ul className="flex gap-4 sm:gap-5 md:gap-10 lg:gap-12">
           <li>
-            <Link className="sm:text-[14px] md:text-[16px]" to="/">Home</Link>
+            <Link className="sm:text-[14px] md:text-[16px]  hover:underline underline-offset-[7px] decoration-[#808080]" to="/">Home</Link>
           </li>
           <li>
-            <Link className="sm:text-[14px] md:text-[16px]"  to="/contact">Contact</Link>
+            <Link className="sm:text-[14px] md:text-[16px] hover:underline underline-offset-[7px] decoration-[#808080]"  to="/contact">Contact</Link>
           </li>
           <li>
-            <Link className="sm:text-[14px] md:text-[16px]"  to="/about">About</Link>
+            <Link className="sm:text-[14px] md:text-[16px] hover:underline underline-offset-[7px] decoration-[#808080]"   to="/about">About</Link>
           </li>
           <li>
-            <Link className="sm:text-[14px] md:text-[16px]"  to="/signUp">SignUp</Link>
+            <Link className="sm:text-[14px] md:text-[16px] hover:underline underline-offset-[7px] decoration-[#808080]"   to="/signUp">SignUp</Link>
           </li>
         </ul>
       </nav>
