@@ -79,9 +79,9 @@ const SignUpUser = () => {
 
           <div className="flex gap-4 justify-center">
             <p className="text-[#999999]">Already have account?{" "}</p>
-            <Link to="/login" className="hover:underline underline-offset-[7px] decoration-[#999999] decoration-solid">Log in</Link>
+            <Link to="/userlogin" className="hover:underline underline-offset-[7px] decoration-[#999999] decoration-solid">Log in</Link>
           </div>
-          <ToastContainer position="top-center" />
+          <ToastContainer position="top-center"/>
         </div>
       </div>
 

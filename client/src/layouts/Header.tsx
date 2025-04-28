@@ -2,8 +2,9 @@ import { Heart, Menu, Search, ShoppingCart } from "lucide-react"
 import Navbar from "../components/ui/Navbar"
 import { useState } from "react"
 import MobileNavbar from "../components/ui/mobileNavbar";
-export const Header = () => {
-  const [isopen, setIsOpen] = useState(false);
+
+export const Header:React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className='w-full max-w-[1170px] h-auto min-h-[38px] mx-auto mt-10 mb-4'>
       <div className="w-full flex justify-between items-center flex-wrap px-4 xl:*:px-0">
@@ -19,13 +20,13 @@ export const Header = () => {
           <div className="flex justify-center items-center gap-4">
             <Heart  className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6"/>
             <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
-            <Menu className="lg:hidden cursor-pointer" onClick={(() => setIsOpen(!isopen))}/>
+            <Menu className="lg:hidden cursor-pointer" onClick={(() => setIsOpen(!isOpen))}/>
           </div>
         </div>
       </div>
 
       {/* mobile Navbar */}
-      {isopen && (
+      {isOpen && (
           <div className="mt-4 w-full">
             <MobileNavbar />
           </div>

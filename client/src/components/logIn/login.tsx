@@ -29,7 +29,7 @@ const Login = () => {
         toast.success("Login successfully!");
     } 
     return (
-        <div className='w-full max-w-[1305px] h-auto min-h-[781px] flex gap-[30px] tablet:gap-[70px] md:gap-[100px] lg:gap-[129.9px] flex-wrap p-5 lg:flex-nowrap'>
+        <div className='w-full max-w-[1305px] h-auto min-h-[781px] flex gap-[30px] tablet:gap-[70px] md:gap-[100px] lg:gap-[129.9px] flex-wrap p-5 lg:flex-nowrap mt-[20px] tablet:mt-[30px] md:mt-[40px] lg:mt-[55px] mb-[3opx] tablet:mb-[50px] md:mb-[60px] lg:mb-[85px]'>
             <div className="w-full max-w-[805px] h-auto min-h-[400px] tablet:min-h-[600px] md:min-h-[700px] lg:min-h-[781px] bg-[#CBE4E8] flex justify-center items-center">
                 <img src="/src/assets/signUp/dl.beatsnoop 1.png" alt="" />
             </div>
