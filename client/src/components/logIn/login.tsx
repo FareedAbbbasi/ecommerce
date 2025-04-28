@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import Line from "../ui/line"
-import { useState } from "react"
+import React, { useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -8,8 +8,21 @@ import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
     const[email, setEmail] = useState("")
     const[password, setPassword] = useState("")
-    const handleSignIn = (e:any) => {
+    const handleSignIn = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        const emailReqex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,15}$/;
+
+        if(!emailReqex.test(email)) {
+            toast.error("Please enter a valid email!");
+            return
+        }
+
+        if(!passwordRegex.test(password)) {
+            toast.error("Password must be 6-15 characters and include uppercase, lowercase, number, and special character!")
+            return;
+        }
         console.log(email, " ", password)
         setEmail("");
         setPassword("");
@@ -39,7 +52,7 @@ const Login = () => {
                             <button type="submit" className=" py-3 px-14 text-[16px] font-medium  bg-[#DB4444] rounded text-[#FAFAFA] hover:bg-[#b83838] transition-colors duration-300">Log in</button>
                         </div>
                         <div className="flex justify-center items-center">
-                            <Link className="text-[#DB4444] text-[16px]" to="">Forget Password?</Link>
+                            <Link className="text-[#DB4444] text-[16px]" to="/forgotpassword">Forget Password?</Link>
                         </div>
                     </div>
                     <ToastContainer position="top-center" />

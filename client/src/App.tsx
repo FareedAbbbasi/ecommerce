@@ -6,6 +6,7 @@ import Home from './pages/home';
 import Contact from './pages/contact';
 import { JSX } from 'react';
 import Login from './components/logIn/login';
+import Forgotpassword from './pages/forgotpassword';
 
 function App():JSX.Element {
   return (
@@ -15,6 +16,7 @@ function App():JSX.Element {
       <Route path='/about' element={<About />} />
       <Route path='/signUp' element={<SignUp />}/>
       <Route path='/login' element={<Login />}/>
+      <Route path='/forgotpassword' element={<Forgotpassword />} />
      </Routes>
   )
 }

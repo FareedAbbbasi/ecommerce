@@ -34,7 +34,7 @@ const CategoryShowcase = () => {
                     </div>
                     <h1 className="w-full max-w-[294px] h-auto min-h-[120px] text-[25px] sm:text-[25px] tablet:text-[30px] md:text-[35px] lg:text-[48px] font-semibold mt-2 md:mt-4 lg:mt-5 mb-[22px]">Up to 10% off Voucher</h1>
                     <div className="flex gap-1 md:gap-2">
-                       <a className="underline" href="">Shop Now</a>
+                       <a className="hover:underline decoration-solid underline-offset-[7px]" href="">Shop Now</a>
                         <ArrowRightIcon />
                     </div>
                 </div>

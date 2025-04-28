@@ -26,7 +26,7 @@ const NewArrival = () => {
                     <div className="w-full max-w-[242px] h-auto min-h-[122px] absolute flex flex-col mb-8 ml-8">
                         <h2 className=" text-[24px] font-semibold">PlayStation 5</h2>
                         <h3 className="text-[14px] py-4">Black and White version of the PS5 coming out on sale.</h3>
-                        <a href="" className="text-[16px] font-medium underline">Shop Now</a>
+                        <a href="" className="text-[16px] font-medium hover:underline decoration-solid underline-offset-[7px]">Shop Now</a>
                     </div>
                 </div>
                 <div className="w-full flex flex-col max-w-[570px] h-auto min-h-[600px] gap-8 md:mx-auto">
@@ -34,7 +34,7 @@ const NewArrival = () => {
                         <div className="w-full max-w-[255px] h-auto min-h-[122px] absolute flex flex-col mb-8 ml-8">
                             <h2 className=" text-[24px] font-semibold">Women’s Collections</h2>
                             <h3 className="text-[14px] py-4">Featured woman collections that give you another vibe. </h3>
-                            <a href="" className="text-[16px] font-medium underline">Shop Now</a>
+                            <a href="" className="text-[16px] font-medium hover:underline decoration-solid underline-offset-[7px]">Shop Now</a>
                         </div>
                         <div className=" w-full flex justify-end ">
                             <img src="/src/assets/new-arrival/women-Collectios.png" alt="" />
@@ -48,7 +48,7 @@ const NewArrival = () => {
                             <div className="w-full max-w-[242px] h-auto min-h-[122px] flex flex-col mb-8 ml-8 absolute mt-[144px]">
                                 <h2 className=" text-[24px] font-semibold">Speakers</h2>
                                 <h3 className="text-[14px] py-4">Amazon wireless speakers</h3>
-                                <a href="" className="text-[16px] font-medium underline">Shop Now</a>
+                                <a href="" className="text-[16px] font-medium hover:underline decoration-solid underline-offset-[7px]">Shop Now</a>
                             </div>
                         </div>
 
@@ -59,7 +59,7 @@ const NewArrival = () => {
                             <div className="w-full max-w-[242px] h-auto min-h-[122px] flex flex-col mb-8 ml-8 absolute mt-[144px]">
                                 <h2 className=" text-[24px] font-semibold">Perfume</h2>
                                 <h3 className="text-[14px] py-4">GUCCI INTENSE OUD EDP</h3>
-                                <a href="" className="text-[16px] font-medium underline">Shop Now</a>
+                                <a href="" className="text-[16px] font-medium hover:underline decoration-solid underline-offset-[7px]">Shop Now</a>
                             </div>
                         </div>
                     </div>

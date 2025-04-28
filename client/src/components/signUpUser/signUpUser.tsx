@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import Line from "../ui/line"
-import { useState } from "react"
+import React, { useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -9,14 +9,32 @@ const SignUpUser = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const handleSignUp = (e:any) => {
+  const handleSignUp = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const nameRegex = /^[A-Za-z\s]+$/;
+    const emailReqex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,15}$/;
+
+    if (!nameRegex.test(name)) {
+      toast.error("Name must only contain letters!");
+      return;
+    }
+
+    if(!emailReqex.test(email)) {
+      toast.error("Please enter a valid email!")
+      return;
+    }
+
+    if (!passwordRegex.test(password)) {
+      toast.error("Password must be 6-15 characters and include uppercase, lowercase, number, and special character!")
+      return;
+    }
+
     console.log("name:", name, "Email:",email , "password", password )
     setName("");
     setEmail("");
     setPassword("");
     toast.success("Account created successfully!");
-
   }
   return (
     <div className='w-full max-w-[1305px] h-auto min-h-[781px] flex gap-[30px] tablet:gap-[70px] md:gap-[100px] lg:gap-[129.9px] flex-wrap p-5 lg:flex-nowrap mt-[20px] tablet:mt-[30px] md:mt-[40px] lg:mt-[55px] mb-[3opx] tablet:mb-[50px] md:mb-[60px] lg:mb-[85px]'>
