@@ -2,8 +2,25 @@
 import { Copyright, SendHorizonal } from "lucide-react"
 import Line from "../components/ui/line"
 import { Link } from "react-router-dom"
+import { useState } from "react"
+import { toast, ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
 
 const Footer = () => {
+  const [email, setEmail] = useState("")
+
+  const handleEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const emailReqex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailReqex.test(email)) {
+      toast.error("Please enter a valid email")
+      return
+    }
+    else {
+      toast.success("Emai send successfully!")
+    }
+  }
   return (
     <div className="w-full h-auto min-h-[440px] bg-[#000000] mx-auto flex flex-col justify-center items-center">
       <div className="w-full max-w-[1170px] h-auto min-h-[236px] text-white flex gap-[30px] tablet:gap-[40px] md:gap-[55px] lg:gap-[87px] flex-wrap  justify-center py-4 md:py-5 md:px-5 lg:py-10 md:flex-nowrap">
@@ -11,10 +28,12 @@ const Footer = () => {
           <h2 className="text-[24px] font-bold">Exclusive</h2>
           <h3 className="text-[20px] font-medium py-6">Subscribe</h3>
           <h4 className=" text-[16px]">Get 10% off your first order</h4>
-          <div className="flex w-full max-w-[217px] h-[48px] border-[2px] gap-8 rounded p-3 mt-4">
-            <input className="w-full max-w-[130px] h-auto min-h-[24px] outline-none bg-transparent text-white" type="text" placeholder="Enter your email" />
-            <SendHorizonal className="w-full max-w-[24px] h-auto  min-h-[24px]" />
-          </div>
+          <form action="" onSubmit={handleEmail} className="flex w-full max-w-[217px] h-[48px] border-[2px] gap-8 rounded p-3 mt-4">
+            <input value={email} required onChange={(e) => setEmail(e.target.value)} className="w-full text-[16px] max-w-[130px] h-auto min-h-[24px] outline-none bg-transparent text-white" type="email" placeholder="Enter your email" />
+            <button type="submit">
+              <SendHorizonal  className="w-full max-w-[24px] h-auto  min-h-[24px] cursor-pointer" />
+            </button>
+          </form>
         </div>
         <div className="w-full max-w-[217px] h-auto min-h-[188px]">
           <h2 className="text-[20px] font-medium">Support</h2>
@@ -67,13 +86,13 @@ const Footer = () => {
         </div>
       </div>
       <div className=" pt-[60px] pb-4 w-full">
-        <Line width="w-[100%]" color="bg-[#141414]"/>
+        <Line width="w-[100%]" color="bg-[#141414]" />
       </div>
       <div className="flex text-[#3D3D3D] gap-[6px] pb-6 px-3 tablet:px-0">
-          <Copyright />
-          <span className="text-[16px]">Copyright Rimel 2022. All right reserved</span>
+        <Copyright />
+        <span className="text-[16px]">Copyright Rimel 2022. All right reserved</span>
       </div>
-
+      <ToastContainer position="top-center"/>
     </div>
   )
 }

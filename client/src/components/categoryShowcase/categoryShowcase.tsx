@@ -39,12 +39,6 @@ const sides: SidesProps[] = [
         subtitle: "iPhone 12 Series",
         image: "/src/assets/products/phone.png",
     },
-    {
-        id: 3,
-        title: "Special Offer on iPhone 12",
-        subtitle: "iPhone 12 Series",
-        image: "/src/assets/products/phone.png",
-    }
 ]
 
 
@@ -86,12 +80,10 @@ const CategoryShowcase = () => {
                             <a className="hover:underline decoration-solid underline-offset-[7px]" href="">Shop Now</a>
                             <ArrowRightIcon />
                         </div>
-
                     </div>
                     <div>
                         <img src={sides[currentSide].image} alt="" />
                     </div>
-
                 </div>
                 <div className="flex justify-center pt-4 gap-3 mb-4">
                     {sides.map((_,index) => (

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import CountDown from './CountDown';
 import DiscountCards from './DiscountCards';
 import MoveArrow from './MoveArrow';
@@ -25,9 +26,10 @@ const FlashSales = () => {
                         <CountDown />
                     </div>
                 </div>
-                <button className="absolute bottom-16 left-1/2 -translate-x-1/2 bg-black text-white py-2 px-6 rounded-full opacity-0 group-hover:opacity-100 transition-all">
+                
+                <Link className="absolute bottom-16 left-1/2 -translate-x-1/2 bg-black text-white py-2 px-6 rounded-full opacity-0 group-hover:opacity-100 transition-all" to={''}>
                     Add To Cart
-                </button>
+                </Link>
                 <div className="flex justify-end items-end mt-4 sm:mt-0">
                     <MoveArrow />
                 </div>

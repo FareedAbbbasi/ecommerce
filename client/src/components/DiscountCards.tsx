@@ -10,25 +10,28 @@ interface products {
     originalPrice: number,
     rating: number,
     image: string
-    imageClass?: string; // Special class for unique image sizing
+    discount: number
+    imageClass?: string;
 }
 
 const DiscountCards: React.FC = () => {
 
     const products: products[] = [
-        { id: "prod-1", name: "HAVIT HV-G92 Gamepad1", currentPrice: 150, originalPrice: 160, rating: 88, image: "g92-2-500x500 1.png" },
-        { id: "prod-2", name: "AK-900 Wired Keyboard", currentPrice: 960, originalPrice: 1160, rating: 75, image: "keyboard.png" },
-        { id: "prod-3", name: "IPS LCD Gaming Monitor", currentPrice: 370, originalPrice: 400, rating: 69, image: "led.png" },
-        { id: "prod-4", name: "S-Series Comfort Chair", currentPrice: 375, originalPrice: 400, rating: 66, image: "chair.png" },
-        { id: "prod-5", name: "Gaming Mouse Pro", currentPrice: 59, originalPrice: 99, rating: 82, image: "led.png", imageClass: "max-w-[102px] min-h-[180px]" },
+        { id: "prod-1", name: "HAVIT HV-G92 Gamepad1", currentPrice: 150, originalPrice: 160, rating: 88, image: "g92-2-500x500 1.png", discount:40,},
+        { id: "prod-2", name: "AK-900 Wired Keyboard", currentPrice: 960, originalPrice: 1160, rating: 75, image: "keyboard.png" ,discount:35},
+        { id: "prod-3", name: "IPS LCD Gaming Monitor", currentPrice: 370, originalPrice: 400, rating: 69, image: "led.png",discount:30},
+        { id: "prod-4", name: "S-Series Comfort Chair", currentPrice: 375, originalPrice: 400, rating: 66, image: "chair.png" ,discount:25},
+        { id: "prod-5", name: "Gaming Mouse Pro", currentPrice: 59, originalPrice: 99, rating: 82, image: "led.png", imageClass: "max-w-[102px] min-h-[180px]" ,discount:15},
+        { id: "prod-6", name: "Gaming Mouse Pro", currentPrice: 59, originalPrice: 99, rating: 82, image: "led.png", imageClass: "max-w-[102px] min-h-[180px]" ,discount:15},
+        { id: "prod-7", name: "Gaming Mouse Pro", currentPrice: 59, originalPrice: 99, rating: 82, image: "led.png", imageClass: "max-w-[102px] min-h-[180px]" ,discount:15},
     ]
     return (
-        <div className='flex overflow-x-auto scrollbar-hide whitespace-nowrap gap-[30px] flex-wrap lg:flex-nowrap'>
+        <div className='flex scrollbar-hide  gap-[30px] flex-wrap lg:flex-nowrap'>
             {products.map((product) => (
                 <div key={product.id} className='w-full max-w-[270px] min-w-[270px] h-auto min-h-[350px]'>
                     <div className='w-full  max-w-[270px] relative group flex justify-center h-auto min-h-[250px] bg-[#F5F5F5] '>
                         <div className='absolute top-0 left-0'>
-                            <ShowDiscount />
+                            <ShowDiscount  discount={product.discount}/>
                         </div>
                         <div className='absolute top-2 right-2 flex flex-col gap-2'>
                             <CardLike />
