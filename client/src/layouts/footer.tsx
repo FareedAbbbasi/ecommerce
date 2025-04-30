@@ -18,7 +18,7 @@ const Footer = () => {
       return
     }
     else {
-      toast.success("Emai send successfully!")
+      toast.success("Email send successfully!")
     }
   }
   return (
@@ -86,7 +86,7 @@ const Footer = () => {
         </div>
       </div>
       <div className=" pt-[60px] pb-4 w-full">
-        <Line width="w-[100%]" color="bg-[#141414]" />
+        <Line width="w-[100%]" color="bg-[#3D3D3D]" />
       </div>
       <div className="flex text-[#3D3D3D] gap-[6px] pb-6 px-3 tablet:px-0">
         <Copyright />

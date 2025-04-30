@@ -42,3 +42,9 @@ const FlashSales = () => {
 };
 
 export default FlashSales;
+
+
+
+
+
+
